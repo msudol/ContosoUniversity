@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using ContosoUniversity.Models;
 
-namespace ContosoUniversity.Pages.Shared
+namespace ContosoUniversity.Pages.Students
 {
     public class DeleteModel : PageModel
     {
