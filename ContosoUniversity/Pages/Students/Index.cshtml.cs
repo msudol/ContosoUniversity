@@ -26,8 +26,7 @@ namespace ContosoUniversity.Pages.Students
         //public IList<Student> Student { get;set; }
         public PaginatedList<Student> Student { get; set; }
 
-        public async Task OnGetAsync(string sortOrder,
-            string currentFilter, string searchString, int? pageIndex)
+        public async Task OnGetAsync(string sortOrder, string currentFilter, string searchString, int? pageIndex)
         {
             CurrentSort = sortOrder;
             NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
@@ -68,8 +67,7 @@ namespace ContosoUniversity.Pages.Students
             }
 
             int pageSize = 3;
-            Student = await PaginatedList<Student>.CreateAsync(
-                studentIQ.AsNoTracking(), pageIndex ?? 1, pageSize);
+            Student = await PaginatedList<Student>.CreateAsync(studentIQ.AsNoTracking(), pageIndex ?? 1, pageSize);
         }
     }
 }
